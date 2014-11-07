@@ -14,58 +14,53 @@
     <li><b>T&iacute;tulo del trabajo</b> <i></i></li>
     <li><b>Componentes del grupo:</b> <i>Alejandro Garcia Yumar</i></li>
     <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
-    <li><b>Fecha de entrega:</b> <i>31 de Octubre de 2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>7 de Noviembre de 2014</i></li>
   </ul>
   </div>
 </div>
 <div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
-<a href='#bloque1'>Introducción</a> | <a href='#bloque2'>Instalaci&Aacute;n</a> | <a href='#bloque3'> Puesta a punto</a>
+<a href='#bloque1'>Introducción</a> | <a href='#bloque2'>configuraci&Aacute;n</a> 
 </div>
 
 <ul>
-	<h1><a id='bloque1'>Instalaci&Aacute;n</a></h1>
-	<p>El ejercicio consiste en instalar correctamente los programas de ldap</p>
+	<h1><a id='bloque1'>Introducci&oacute;n</a></h1>
+	<p>El ejercicio consiste en configurar ldap</p>
 		
 		
 </ul>
 
 <ul>
 <h1><a id='bloque2'>Primera parte</a></h1>
-		<p>Se iran mostrando las distintas capturas del proceso ha seguir.</p></br>
-		<p>Para empezar debemos poner en los repositorios los siguientes datos.</p></br>
+		<p>Para empezar debemos instalar las librerias, para ello escribimos apt-get install libpam-ldap.</p></br>
+		<p>Acto seguido nos aparecera las ventanas de instalacion en el orden siguiente, siguiendo las indicaciones de la imagen.</p></br>
 		<img src='./files/ldap1.png' height="50%" width="50%"/></br>
-		<p>Para empezar debemos poner en los repositorios los siguientes datos.</p></br>
 		<img src='./files/ldap2.png' height="50%" width="50%"/></br>
-		<p>Ahora ejecutamos el comando apt-get install para instalarlo.</p></br>
 		<img src='./files/ldap3.png' height="50%" width="50%"/></br>
-		<p>Para terminar la instalaci&oacute;n rellenamos los huecos de</br>
-		 las siguientes imagenes con los datos para nuestro ldap preferentemente</br>
-		 siguiendo las imagenes.</p></br>
 		<img src='./files/ldap3.png' height="50%" width="50%"/></br>
+		<p>En la siguiente imagen debemos decir que si.</p></br>
 		<img src='./files/ldap4.png' height="50%" width="50%"/></br>
 		<img src='./files/ldap5.png' height="50%" width="50%"/></br>
-		<img src='./files/ldap6.png' height="50%" width="50%"/></br>
+		<p>Para crear el usuario root.</p></br>
 		<img src='./files/ldap7.png' height="50%" width="50%"/></br>
 		<img src='./files/ldap8.png' height="50%" width="50%"/></br>
 		<img src='./files/ldap9.png' height="50%" width="50%"/></br>
 		<img src='./files/ldap10.png' height="50%" width="50%"/></br>
 		<img src='./files/ldap11.png' height="50%" width="50%"/></br>
-</ul>
-
-<ul>
-<h1><a id='bloque3'>Puesta a punto</a></h1>
-		<p>Ahora consiste en instalar el programa phpldapadmin para poder</br>
-		modificar nuestro ldap.</br>
-		Esto lo conseguimos con el comando apt-get install</p></br>
-		<img src='./files/ldap12.png' height="50%" width="50%"/></br>
-		<p>Despues de estar instalado podemos crear un usuario en esta ventana</p>
+		<p>Ahora consiste en configurar los documentos /etc/ldap.conf, /etc/nsswitch.conf, /etc/pam.d/common-auth,</br>
+		/etc/pam.d/common-account, /etc/pam.d/common-session, /etc/pam.d/common-password respectivamente, en las lineas que se indican en la imagen</p></br>
+		<p>/etc/ldap.conf.</p></br>
+		<img src='./files/ldap6.png' height="50%" width="50%"/></br>
+		<p>/etc/nsswitch.conf.</p></br>
+		<img src='./files/lda12.png' height="50%" width="50%"/></br>
+		<p>/etc/pam.d/common-auth</p>
 		<img src='./files/ldap13.png' height="50%" width="50%"/></br>
-		<p>Los grupos creados</p>
+		<p>/etc/pam.d/common-account</p>
 		<img src='./files/ldap14.png' height="50%" width="50%"/></br>
-		<p>El menu en que se puede crear los grupos y usuarios</p>
+		<p>/etc/pam.d/common-session</p>
 		<img src='./files/ldap15.png' height="50%" width="50%"/></br>
-		<p>Uso de jxplorer desde otro ordenador en que se muestra la base de datos anterior.</p>
+		<p>/etc/pam.d/common-password.</p>
 		<img src='./files/ldap16.png' height="50%" width="50%"/></br>
+		<p>A partir de este punto deberia poder acceder con el cliente, pero ocurre el problema de que una vez reinicie el equipo no me deja acceder a el.</p></br>
 </ul>
 
 
