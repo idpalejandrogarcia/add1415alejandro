@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>Impresora con pdfcreator</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i> Administración de Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i></i></li>
+    <li><b>Componentes del grupo:</b> <i>Alejandro Garcia Yumar</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2015/2016</i></li>
+    <li><b>Fecha de entrega:</b> <i>27/02/2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Introducci&oacute;n</a> | <a href='#bloque2'>Instalacion de los programas</a> | <a href='#bloque3'>Configuracion de los scripts</a> 
+</div>
+
+<ul>
+	<h1><a id='bloque1'>Introducci&oacute;n</a></h1>
+	<p>El ejercicio consiste en instalar los programas gwak y xcacls, y utilizarlos para el registro de usuarios automaticamente en un active directory con un script.</p>
+		
+		
+</ul>
+
+<ul>
+<h1><a id='bloque2'>Instalacion de los programas</a></h1>
+		<p>Intalamos el gwak desde su sitio oficial.</p>
+		<img src='./files/usu1.png' height="50%" width="50%"/></br></br>
+		<p>A continuacion las distintas capturas de su instalacion.</p>
+		<img src='./files/usu2.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu3.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu4.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu5.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu6.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu7.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu8.png' height="50%" width="50%"/></br></br>
+		<p>Intalamos el xcacls y lo descomprimimos en c:/windows para su utilizacion.</p>
+		<img src='./files/usu9.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu10.png' height="50%" width="50%"/></br></br>
+		<p>Ahora debemos dirigirnos a propiedades del sitema/variables del entorno y editamos la variable path como la de la imagen para que se pueda ejecutar desde cualquier sitio, recordando colocar la coma al final de la palabra bin.</p>
+		<img src='./files/usu11.png' height="50%" width="50%"/></br></br>
+		<p>Seguido a lo anterior debemos modificar el documento en c:\windows\XCACLS.vbs y buscar la funcion IsOsSupported() y añadir los datos mostrados abajo.</p>
+		<img src='./files/usu12.png' height="50%" width="50%"/></br></br>
+		<p>Ejecutamos el comando mostrado a continuacion en un cmd; debemos poner el final del codigo algun parametro como ?  para que no nos salte el error de la segunda imagen.</p>
+		<img src='./files/usu13.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu14.png' height="50%" width="50%"/></br></br>
+		<img src='./files/usu15.png' height="50%" width="50%"/></br></br>
+		
+</ul>
+<ul>
+	<h1><a id='bloque3'>Configuracion de los scripts</a></h1>
+	<p>Seguimos con la configuracion de los scripts de creacion; primero con el que contendra a los usuarios de el directorio activo.</p>
+	<img src='./files/usu16.png' height="50%" width="50%"/></br></br>
+	<p>Creamos el documento en que nos encargaremos de dar de alta a los usuarios.</p>
+	<img src='./files/usu17.png' height="50%" width="50%"/></br></br>
+	<p>Como se copia este escript debemos modificarlo teniendo en cuenta que los caracteres como '-q' se pueden copiar mal, temiendo que volver a escribirlos.</p>
+	<img src='./files/usu18.png' height="50%" width="50%"/></br></br>
+	<p>Tener en cuenta que debemos sustituir el dominio que tiene de ejemplo el script por el nuestro propio, y crear el OU "Formacion Profesional".</p>
+	<img src='./files/usu22.png' height="50%" width="50%"/></br></br>
+	<img src='./files/usu23.png' height="50%" width="50%"/></br></br>
+	<img src='./files/usu19.png' height="50%" width="50%"/></br></br>
+	<p>Ahora ejecutamos awk -f alta.awk usuarios.csv; si nos equivocamos al escribirlo nos dara un error y nos lo creara vacio.</p>
+	<img src='./files/usu20.png' height="50%" width="50%"/></br></br>
+	<p>Si nos quedo algun parametro sin corregir del PDF nos dar&aacute; el siguiente error al usar el crear.bat .</p>
+	<img src='./files/usu21.png' height="50%" width="50%"/></br></br>
+	<p>Si todo a ido bien al ejecutarlo nos deberia crear todos los usuarios y los distintos apartados.</p>
+	<img src='./files/usu24.png' height="50%" width="50%"/></br></br>
+	<img src='./files/usu25.png' height="50%" width="50%"/></br></br>
+	
+</ul>
+</body>
+</html>
