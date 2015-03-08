@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Impresora con pdfcreator</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i> Administración de Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i></i></li>
+    <li><b>Componentes del grupo:</b> <i>Alejandro Garcia Yumar</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2015/2016</i></li>
+    <li><b>Fecha de entrega:</b> <i>7/03/2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Introducci&oacute;n</a> | <a href='#bloque2'>Windows</a> | <a href='#bloque3'>Linux</a> 
+</div>
+
+<ul>
+	<h1><a id='bloque1'>Introducci&oacute;n</a></h1>
+	<p>El ejercicio consiste en instalar y utilizar un servicio nfs entre dos windows y dos linux.</p>
+		
+		
+</ul>
+
+<ul>
+<h1><a id='bloque2'>Windows</a></h1>
+		<p>Para empezar a trabajar debemos instalar en nuestro servidor el sistema nfs con añadir funciones.</p>
+		<img src='./files/nfs1.png' height="50%" width="50%"/></br></br>
+		<img src='./files/nfs2.png' height="50%" width="50%"/></br></br>
+		<img src='./files/nfs3.png' height="50%" width="50%"/></br></br>
+		<p>Una vez terminada la instalaci&oacute;n nos aparecera esta ventana.</p>
+		<img src='./files/nfs4.png' height="50%" width="50%"/></br></br>
+		<p>Creamos c:\export\public y c:\export\private, y configuramos su uso compartido de nfs en su seccion de propiedades.</p>
+		<img src='./files/nfs5.png' height="50%" width="50%"/></br></br>
+		<img src='./files/nfs6.png' height="50%" width="50%"/></br></br>
+		<img src='./files/nfs7.png' height="50%" width="50%"/></br></br>
+		<img src='./files/nfs8.png' height="50%" width="50%"/></br></br>
+		<p>Ahora debemos instalar las funcion de cliente nfs en el otro windows, en este caso un windows 7, desde la opcion de añadir programas del windows</p>
+		<img src='./files/nfs9.png' height="50%" width="50%"/></br></br>
+		<p>Ejecutamos el siguiente comando para iniciarlo.</p>
+		<img src='./files/nfs0.png' height="50%" width="50%"/></br></br>
+		<p>Y escribimos los siguientes para montarlos.</p>
+		<img src='./files/nfs11.png' height="50%" width="50%"/></br></br>
+		<p>Ahora creamos un documento en el servidor y lo podremos modificar en el cliente.</p>
+		<img src='./files/nfs12.png' height="50%" width="50%"/></br></br>
+		<p>En este caso no se pudo visualizar los documentos debidos a que debemos utilizar un windows server 2008 r2, solo pudiendo conectarse a la carpeta.</p>
+		<img src='./files/nfs13.png' height="50%" width="50%"/></br></br>
+</ul>
+<ul>
+	<h1><a id='bloque3'>Linux</a></h1>
+	<p>Vamos a hacer un proceso parecido, con lo que instalaremos el nfs por comandos, escribiendo apt-get install nfs-common nfs-kernel-server.</p></br>
+	<p>Luego de instalarlo debemos crear las carpetas y ejecutar los siguientes comandos para compartirlas por nfs.</p>
+	<img src='./files/nfs14.png' height="50%" width="50%"/></br></br>
+	<p>Los siguentes comandos los ejecutaremos despues segun convenga para arrancar o parar el servidor.</p>
+	<img src='./files/nfs16.png' height="50%" width="50%"/></br></br>
+	<p>Ahora desde el cliente que tenemos configurado con una ip estatica, le intalamos un nmap, si no lo tiene ya, para buscar los recursos que ofrece el servidor.</p>
+	<img src='./files/nfs17.png' height="50%" width="50%"/></br></br>
+	<img src='./files/nfs18.png' height="50%" width="50%"/></br></br>
+	<p>Le instalamos el servicio nfs al cliente.</p>
+	<img src='./files/nfs19.png' height="50%" width="50%"/></br></br>
+	<p>Creamos las carpetas donde montaremos las del servidor, y las montamos luego en ellas con los siguentes comandos.</p>
+	<img src='./files/nfs21.png' height="50%" width="50%"/></br></br>
+	<p>Ahora creamos un documento en el servidor y podremos modicarlos en el cliente, como en la imagen.</p>
+	<img src='./files/nfs22.png' height="50%" width="50%"/></br></br>
+	<img src='./files/nfs23.png' height="50%" width="50%"/></br></br>
+
+		
+</ul>
+</body>
+</html>
