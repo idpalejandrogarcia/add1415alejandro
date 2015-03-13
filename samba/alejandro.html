@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>Samba windows/linux</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i> Administración de Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i></i></li>
+    <li><b>Componentes del grupo:</b> <i>Alejandro Garcia Yumar</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2015/2016</i></li>
+    <li><b>Fecha de entrega:</b> <i>13/03/2015</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Introducci&oacute;n</a> | <a href='#bloque2'>Servidor</a> | <a href='#bloque3'>windows</a> | <a href='#bloque4'>Linux</a> 
+</div>
+
+<ul>
+	<h1><a id='bloque1'>Introducci&oacute;n</a></h1>
+	<p>El ejercicio consiste en instalar y utilizar un servicio samba para poder compartir archivos entre este servidor, y un windows y un linux.</p>
+		
+</ul>
+<ul>
+<h1><a id='bloque2'>Servidor</a></h1>
+		<p>Para empezar a trabajar debemos instalar en nuestro servidor linux el sistema samba, para conpartir los distintos archivos.</p>
+		<p>Una vez instalado debemos crear los distintos usuarios que emplearemos en la practica.</p>
+		<img src='./files/samba1.png' height="50%" width="50%"/></br></br>
+		<p>Una vez creados, creamos las carpetas en que se colocaran los documentos de estos usuarios. tambien por seguridad haremos una copia de los documentos por defecto de samba.</p>
+		<img src='./files/samba2.png' height="50%" width="50%"/></br></br>
+		<p>Añadimos los usuarios a los grupos.</p>
+		<img src='./files/samba3.png' height="50%" width="50%"/></br></br>
+		<p>Le damos los permisos de las carpetas creadas antes para los distintos usuarios.</p>
+		<img src='./files/samba4.png' height="50%" width="50%"/></br></br>
+		<p>Creamos las contraseñas de samba para los usuarios.</p>
+		<img src='./files/samba5.png' height="50%" width="50%"/></br></br>
+		<p>Utilizamos pdbedit -L luego para comprobar si se hizo de forma correcta.</p>
+		<img src='./files/samba6.png' height="50%" width="50%"/></br></br>
+		<p>Utilizamos netstat -tap y testparm para ver si esta al a escucha despues de haber reiniciado el samba.</p>
+		<img src='./files/samba7.png' height="50%" width="50%"/></br></br>
+		<img src='./files/samba8.png' height="50%" width="50%"/></br></br>
+</ul>
+<ul>
+<h1><a id='bloque3'>Windows</a></h1>
+		<p>Ahora solo debemos irnos a windows y buscar por la red nuestras carpetas compartidas, buscando el nombre de nuestro equipo.</p>
+		<img src='./files/samba9.png' height="50%" width="50%"/></br></br>
+		<p>Nos logueamos con info1.</p>
+		<img src='./files/samba10.png' height="50%" width="50%"/></br></br>
+		<p>Si creamos un documento en el servidor, lo veremos en el cliente windows  y podremos modificarlo.</p>
+		<img src='./files/samba11.png' height="50%" width="50%"/></br></br>
+		<p>Con smbstatus podemos ver si se ha hecho la coneccion de formsa correcta.</p>
+		<img src='./files/samba12.png' height="50%" width="50%"/></br></br>
+		<p>Usamos net use para liberar la conecci&oacute;n.</p>
+		<img src='./files/samba13.png' height="50%" width="50%"/></br></br>
+		<p>Probamos conectandonos con panaderos tambien.</p>
+		<img src='./files/samba14.png' height="50%" width="50%"/></br></br>
+		<p>Ahora probamos conectandonos por comandos.</p>
+		<img src='./files/samba15.png' height="50%" width="50%"/></br></br>
+		<p>Podemos comprobar que se conecta de forma correcta.</p>
+		<img src='./files/samba16.png' height="50%" width="50%"/></br></br>
+		<p>Nos saldra de nuevo la ventana de los documentos.</p>
+		<img src='./files/samba17.png' height="50%" width="50%"/></br></br>
+</ul>
+<ul>
+	<h1><a id='bloque4'>Linux</a></h1>
+	<p>Para terminar ahremos el mismo proceso en otro linux.</p></br>
+	<p>Volvemos a buscar por red nuestro equipo, y a loguearnos para acceder a los documentos.</p>
+	<img src='./files/samba18.png' height="50%" width="50%"/></br></br>
+	<img src='./files/samba19.png' height="50%" width="50%"/></br></br>
+	<p>Debido a un fallo en la maquina cliente que no se llego ha descubrir, solo se permitia entrar a los documentos en modo lectura.</p>
+	<img src='./files/samba20.png' height="50%" width="50%"/></br></br>
+	<p>Panaderos</p>
+	<img src='./files/samba21.png' height="50%" width="50%"/></br></br>
+	<p>Probamos con comandos, poniendo smbclient --list ip-servidor-samba para ver los recursos que ofrece.</p>
+	<img src='./files/samba22.png' height="50%" width="50%"/></br></br>
+	<p>Ahora desde el cliente que tenemos configurado con una ip estatica, le intalamos un nmap, si no lo tiene ya, para buscar los recursos que ofrece el servidor.</p>
+	<img src='./files/samba23.png' height="50%" width="50%"/></br></br>
+	<img src='./files/samba24.png' height="50%" width="50%"/></br></br>
+	<p>Debido al problema con que solo permite lectura, debi ir a otro equipo a conectarme por comandos, demostrando que solo era un problema con la otra maquina virtual.</p>
+	<img src='./files/samba25.png' height="50%" width="50%"/></br></br>
+	<p>Creamos las carpetas donde montaremos las del servidor, y las montamos luego en ellas con los siguentes comandos.</p>
+	<img src='./files/nfs21.png' height="50%" width="50%"/></br></br>
+	<p>Ahora creamos un documento en el servidor y podremos modicarlos en el cliente, como en la imagen.</p>
+	<img src='./files/nfs22.png' height="50%" width="50%"/></br></br>
+	<img src='./files/nfs23.png' height="50%" width="50%"/></br></br>
+
+		
+</ul>
+</body>
+</html>
