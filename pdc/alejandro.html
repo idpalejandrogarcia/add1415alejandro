@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Samba windows/linux</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i> Administración de Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i></i></li>
+    <li><b>Componentes del grupo:</b> <i>Alejandro Garcia Yumar</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2015/2016</i></li>
+    <li><b>Fecha de entrega:</b> <i>13/03/2015</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Introducci&oacute;n</a> | <a href='#bloque2'>Servidor</a> | <a href='#bloque3'>windows</a> 
+</div>
+
+<ul>
+	<h1><a id='bloque1'>Introducci&oacute;n</a></h1>
+	<p>El ejercicio consiste en instalar y utilizar un servicio samba para emplearlo como servidor pdc.</p>
+		
+</ul>
+<ul>
+<h1><a id='bloque2'>Servidor</a></h1>
+		<p>Para empezar a trabajar debemos crear los distintos grupos de las maquinas, y los usuarios que representaran a estas.</p>
+		<img src='./files/1.png' height="50%" width="50%"/></br></br>
+		<p>Añadimos estos usuarios al samba.</p>
+		<img src='./files/2.png' height="50%" width="50%"/></br></br>
+		<p>Añadimos los grupos de usuarios.</p>
+		<img src='./files/3.png' height="50%" width="50%"/></br></br>
+		<p>Les asignamos las contraseñas.</p>
+		<img src='./files/4.png' height="50%" width="50%"/></br></br>
+		<p>Creamos los perfiles en las carpetas de samba.</p>
+		<img src='./files/5.png' height="50%" width="50%"/></br></br>
+		<p>Nos encargamos de rellenar el archivo smb.conf como la siguiente imagen.</p>
+		<img src='./files/6.png' height="50%" width="50%"/></br></br>
+		<img src='./files/7.png' height="50%" width="50%"/></br></br>
+		
+</ul>
+<ul>
+<h1><a id='bloque3'>Windows</a></h1>
+		<p>Ahora solo debemos irnos a windows y asegurarnos que tenga el nombre como habiamos especificado en la practica, e intentamos conectarnos a nuestro dominio.</p>
+		<img src='./files/8.png' height="50%" width="50%"/></br></br>
+		<p>Nos saldra el siguiente error debido a una configuracion de windows 7.</p>
+		<img src='./files/10.png' height="50%" width="50%"/></br></br>
+		<p>Lo solucionamos poniendo esta informacion en el regedit, en la direccion HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanWorkstation\Parameters.</p>
+		<img src='./files/9.png' height="50%" width="50%"/></br></br>
+		
+</ul>
+</body>
+</html>
